@@ -16,11 +16,14 @@ reducedMotion.addEventListener('change', (event) => { motionPaused = event.match
 // The real heading remains readable for assistive technology and without JavaScript.
 const role = document.querySelector('#typed-role');
 const roleText = role.textContent;
-role.setAttribute('aria-label', roleText);
+
 if (!motionPaused) {
   const animatedRole = document.createElement('span');
   animatedRole.setAttribute('aria-hidden', 'true');
-  role.replaceChildren(animatedRole);
+  const accessibleRole = document.createElement('span');
+  accessibleRole.className = 'sr-only';
+  accessibleRole.textContent = roleText;
+  role.replaceChildren(accessibleRole, animatedRole);
   let character = 0;
   function typeRole() {
     if (motionPaused) { animatedRole.textContent = roleText; return; }

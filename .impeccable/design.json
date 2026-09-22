@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "extensions": {
+    "motion": {
+      "ease": "cubic-bezier(.16,1,.3,1)",
+      "reveal": "800ms",
+      "reducedMotion": true
+    },
+    "layout": {
+      "maxWidth": "1280px",
+      "breakpoints": [
+        {
+          "name": "compact",
+          "value": "1100px"
+        },
+        {
+          "name": "tablet",
+          "value": "800px"
+        },
+        {
+          "name": "mobile",
+          "value": "560px"
+        },
+        {
+          "name": "narrow",
+          "value": "360px"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "html": "<button class=\"ds-button\">Ver projetos</button>",
+      "css": ".ds-button{background:#c0ef79;color:#17200d;border:0;border-radius:5px;padding:13px 23px;font:500 14px sans-serif}.ds-button:hover{background:#d5ffaa}.ds-button:focus-visible{outline:2px solid #c0ef79;outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ambiente de desenvolvimento editorial",
+    "overview": "Tipografia ampla, superfícies escuras e diagrama de competências.",
+    "dos": [
+      "Preservar as informações reais e os links confirmados."
+    ],
+    "donts": [
+      "Não inventar senioridade, percentuais ou experiência."
+    ]
+  }
+}
